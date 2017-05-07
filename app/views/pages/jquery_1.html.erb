@@ -1,0 +1,23 @@
+<p>
+  <a id="my-click">Click Me </a>
+</p>
+
+<div id="foo" style="border: 1px solid red;">
+  <p>bar</p>
+</div>
+<div id="buhao">
+ <p>真的不好哦</p>
+</div>
+<%= link_to("hahahah",jquery_5_path,:class =>"nihao")%>
+
+<script>
+  console.log("checkpoint A")
+  $("#my-click").click(function(){
+    $("#foo").prepend("<h1>hahah</h1>")
+    console.log("checkpoint C")
+  })
+  $("#buhao").hover(function(){
+    $(".nihao").animate();
+  })
+  console.log("checkpoint B")
+</script>

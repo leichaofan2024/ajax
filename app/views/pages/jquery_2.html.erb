@@ -1,0 +1,26 @@
+<p>
+  <a id="my-open-click">Open</a>
+</p>
+
+<div id= "foo" style="border:1px solid red;">
+  <a id= "my-hide-click">Hide</a>
+  <p>bar</p>
+</div>
+<div class="">
+  <p id="big" style="border:1px solid red;height:50px;">dadadadadadaad</p>
+</div>
+
+<script>
+  $("#foo").slideDown();
+
+  $("#my-open-click").hover(function(){
+    $("#foo").slideDown();
+  })
+
+  $("#my-hide-click").hover(function(){
+    $("#foo").slideUp();
+  })
+  $("#big").hover(function(){
+    $("#big").width(100).height(100);
+  })
+</script>

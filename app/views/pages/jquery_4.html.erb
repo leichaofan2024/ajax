@@ -1,0 +1,29 @@
+<p>
+  <a id="my-replace-click">Replace</a>
+  <a id="my-remove-click">Remove</a>
+  <a id="my-remove-all-click">Remove All</a>
+</p>
+
+<div id="foo" style="border:1px solid red;">
+  <p>bar</p>
+</div>
+
+<div class="zoo"><p>b</p></div>
+<div class="zoo"><p>b</p></div>
+<div class="zoo"><p>b</p></div>
+
+<script>
+console.log("checkpoint A")
+  $("#my-replace-click").click(function(){
+    $("#foo").replaceWith('<div id="foo" style="border:1px solid green;"><h1>fuck you</h1></div>');
+  })
+
+  $("#my-remove-click").click(function(){
+    $("#foo").remove();
+  })
+
+  $("#my-remove-all-click").click(function(){
+    $(".zoo").remove();
+  })
+  console.log("check B ")
+</script>
